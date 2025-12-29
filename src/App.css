@@ -221,6 +221,14 @@ body {
   gap: 16px;
 }
 
+/* Content Wrapper - holds tool panel and results */
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex: 1;
+}
+
 /* API Key Banner */
 .api-key-banner {
   background: rgba(255, 76, 0, 0.1);
@@ -619,14 +627,20 @@ textarea.form-input {
   .main-content {
     margin-left: 240px;
     padding: 84px 24px 24px;
-    flex-direction: row;
-    flex-wrap: wrap;
   }
 
-  .tool-panel,
+  .content-wrapper {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .tool-panel {
+    flex: 0 0 400px;
+  }
+
   .result-panel {
     flex: 1;
-    min-width: 300px;
+    min-width: 0;
   }
 
   .logo-text {
@@ -641,32 +655,19 @@ textarea.form-input {
 
 /* ========== DESKTOP (1024px+) ========== */
 @media (min-width: 1024px) {
-  .main-content {
+  .content-wrapper {
     gap: 24px;
   }
 
   .tool-panel {
-    max-width: 550px;
-  }
-
-  .result-panel {
-    max-width: 600px;
+    flex: 0 0 450px;
   }
 
   .result-content {
-    max-height: 500px;
+    max-height: 600px;
   }
 
   .tool-card {
     padding: 24px;
-  }
-}
-
-/* ========== LARGE DESKTOP (1280px+) ========== */
-@media (min-width: 1280px) {
-  .main-content {
-    max-width: 1400px;
-    margin-left: 240px;
-    margin-right: auto;
   }
 }

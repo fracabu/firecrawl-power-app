@@ -105,23 +105,25 @@ function App() {
       <main className="main-content">
         {!apiKey && (
           <div className="api-key-banner">
-            <span>⚠️ No API key configured.</span>
+            <span>No API key configured.</span>
             <button onClick={() => setShowApiKeyModal(true)}>
               Add API Key
             </button>
           </div>
         )}
-        <ToolPanel
-          tool={currentTool}
-          onExecute={(params) => handleExecute(activeTool, params)}
-          loading={loading}
-        />
-        <ResultDisplay
-          result={result}
-          error={error}
-          loading={loading}
-          toolId={activeTool}
-        />
+        <div className="content-wrapper">
+          <ToolPanel
+            tool={currentTool}
+            onExecute={(params) => handleExecute(activeTool, params)}
+            loading={loading}
+          />
+          <ResultDisplay
+            result={result}
+            error={error}
+            loading={loading}
+            toolId={activeTool}
+          />
+        </div>
       </main>
       <ApiKeyModal
         isOpen={showApiKeyModal}

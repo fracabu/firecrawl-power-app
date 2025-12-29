@@ -22,6 +22,7 @@ function App() {
     return localStorage.getItem('firecrawl_api_key') || ''
   })
   const [showApiKeyModal, setShowApiKeyModal] = useState(false)
+  const [sidebarOpen, setSidebarOpen] = useState(false)
   const [activeTool, setActiveTool] = useState('scrape')
   const [result, setResult] = useState(null)
   const [loading, setLoading] = useState(false)
@@ -38,6 +39,12 @@ function App() {
       setShowApiKeyModal(true)
     }
   }, [])
+
+  // Close sidebar on tool select (mobile)
+  const handleSelectTool = (toolId) => {
+    setActiveTool(toolId)
+    setSidebarOpen(false)
+  }
 
   const toggleTheme = () => {
     setTheme(prev => prev === 'light' ? 'dark' : 'light')
@@ -86,12 +93,15 @@ function App() {
         onToggleTheme={toggleTheme}
         onOpenSettings={() => setShowApiKeyModal(true)}
         hasApiKey={!!apiKey}
+        onToggleSidebar={() => setSidebarOpen(!sidebarOpen)}
       />
       <Sidebar
         tools={tools}
         activeTool={activeTool}
-        onSelectTool={setActiveTool}
+        onSelectTool={handleSelectTool}
+        isOpen={sidebarOpen}
       />
+      {sidebarOpen && <div className="sidebar-overlay" onClick={() => setSidebarOpen(false)} />}
       <main className="main-content">
         {!apiKey && (
           <div className="api-key-banner">

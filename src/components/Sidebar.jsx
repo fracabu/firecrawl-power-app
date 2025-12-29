@@ -1,6 +1,6 @@
-function Sidebar({ tools, activeTool, onSelectTool }) {
+function Sidebar({ tools, activeTool, onSelectTool, isOpen }) {
   return (
-    <aside className="sidebar">
+    <aside className={`sidebar ${isOpen ? 'open' : ''}`}>
       <div className="sidebar-title">Tools</div>
       {tools.map(tool => (
         <div

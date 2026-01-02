@@ -85,7 +85,8 @@ After running `npm run dev`, open `http://localhost:5173` in your browser.
 
 ## TODO
 
-- [ ] **Verificare Agent 5 richieste gratis/giorno** - La documentazione Firecrawl menziona 5 richieste Agent gratuite al giorno. Se confermato, aggiornare:
-  - Badge PRO in sidebar (potrebbe diventare "5/day free")
-  - Nota nel ToolPanel per Agent
-  - README (tabella features)
+- [x] **Verificare Agent 5 richieste gratis/giorno** - Confermato! Aggiornato badge "5/day" verde per Agent
+- [ ] **Investigare errore Agent con chiave free** - L'Agent dovrebbe funzionare con 5 richieste/giorno gratuite ma restituisce errore. Verificare:
+  - Formato della richiesta API
+  - Eventuali parametri mancanti
+  - Se serve attivazione speciale dell'account

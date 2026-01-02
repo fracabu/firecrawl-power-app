@@ -11,7 +11,7 @@ const tools = [
   { id: 'search', name: 'Search', icon: '🔍', description: 'Search the web and extract content', requiresPaid: true },
   { id: 'crawl', name: 'Crawl', icon: '🕷️', description: 'Crawl entire websites' },
   { id: 'extract', name: 'Extract', icon: '📊', description: 'Extract structured data with AI', requiresPaid: true },
-  { id: 'agent', name: 'Agent', icon: '🤖', description: 'Autonomous web data gathering', requiresPaid: true },
+  { id: 'agent', name: 'Agent', icon: '🤖', description: 'Autonomous web data gathering', freeDaily: 5 },
 ]
 
 function App() {

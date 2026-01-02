@@ -39,7 +39,7 @@
 | 🕷️ **Crawl** | Crawl entire websites with depth control | Free |
 | 🔍 **Search** | Search the web with advanced operators | PRO |
 | 📊 **Extract** | Extract structured data using AI and JSON schemas | PRO |
-| 🤖 **Agent** | Autonomous AI agent for complex data gathering | PRO |
+| 🤖 **Agent** | Autonomous AI agent for complex data gathering | 5/day free |
 | 🌙 **Dark Mode** | Beautiful dark/light theme toggle | Free |
 | 🔑 **BYOK** | Bring Your Own Key - use your personal Firecrawl API key | Free |
 
@@ -229,7 +229,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 | 🕷️ **Crawl** | Scansiona interi siti web con controllo della profondità | Free |
 | 🔍 **Search** | Cerca nel web con operatori avanzati | PRO |
 | 📊 **Extract** | Estrai dati strutturati usando AI e schemi JSON | PRO |
-| 🤖 **Agent** | Agente AI autonomo per raccolta dati complessa | PRO |
+| 🤖 **Agent** | Agente AI autonomo per raccolta dati complessa | 5/day free |
 | 🌙 **Dark Mode** | Bellissimo toggle tema chiaro/scuro | Free |
 | 🔑 **BYOK** | Porta la Tua Chiave - usa la tua API key Firecrawl personale | Free |
 

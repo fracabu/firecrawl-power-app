@@ -27,6 +27,11 @@ function ToolPanel({ tool, onExecute, loading }) {
             Requires paid Firecrawl plan. <a href="https://firecrawl.dev/pricing" target="_blank" rel="noopener noreferrer">View pricing</a>
           </div>
         )}
+        {tool.freeDaily && (
+          <div className="free-notice">
+            {tool.freeDaily} free runs per day included. <a href="https://firecrawl.dev/pricing" target="_blank" rel="noopener noreferrer">View pricing</a>
+          </div>
+        )}
         <FormComponent onExecute={onExecute} loading={loading} />
       </div>
     </div>

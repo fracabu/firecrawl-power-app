@@ -10,6 +10,7 @@ function Sidebar({ tools, activeTool, onSelectTool, isOpen }) {
         >
           <span className="sidebar-item-icon">{tool.icon}</span>
           <span>{tool.name}</span>
+          {tool.requiresPaid && <span className="pro-badge">PRO</span>}
         </div>
       ))}
     </aside>

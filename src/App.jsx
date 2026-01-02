@@ -8,10 +8,10 @@ import ApiKeyModal from './components/ApiKeyModal'
 const tools = [
   { id: 'scrape', name: 'Scrape', icon: '📄', description: 'Extract content from a single page' },
   { id: 'map', name: 'Map', icon: '🗺️', description: 'Discover all URLs on a website' },
-  { id: 'search', name: 'Search', icon: '🔍', description: 'Search the web and extract content' },
+  { id: 'search', name: 'Search', icon: '🔍', description: 'Search the web and extract content', requiresPaid: true },
   { id: 'crawl', name: 'Crawl', icon: '🕷️', description: 'Crawl entire websites' },
-  { id: 'extract', name: 'Extract', icon: '📊', description: 'Extract structured data with AI' },
-  { id: 'agent', name: 'Agent', icon: '🤖', description: 'Autonomous web data gathering' },
+  { id: 'extract', name: 'Extract', icon: '📊', description: 'Extract structured data with AI', requiresPaid: true },
+  { id: 'agent', name: 'Agent', icon: '🤖', description: 'Autonomous web data gathering', requiresPaid: true },
 ]
 
 function App() {
@@ -124,6 +124,14 @@ function App() {
             toolId={activeTool}
           />
         </div>
+        <footer className="app-footer">
+          <p>
+            Powered by <a href="https://firecrawl.dev" target="_blank" rel="noopener noreferrer">Firecrawl</a> & <a href="https://docs.firecrawl.dev/mcp-server" target="_blank" rel="noopener noreferrer">Firecrawl MCP</a>
+            <span className="footer-separator">•</span>
+            Built with <a href="https://claude.ai/code" target="_blank" rel="noopener noreferrer">Claude Opus 4.5</a>
+            <span className="model-id">(claude-opus-4-5-20251101)</span>
+          </p>
+        </footer>
       </main>
       <ApiKeyModal
         isOpen={showApiKeyModal}

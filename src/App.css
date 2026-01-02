@@ -212,6 +212,21 @@ body {
   justify-content: center;
 }
 
+.pro-badge {
+  margin-left: auto;
+  background: linear-gradient(135deg, #FF4C00, #FF6B35);
+  color: white;
+  font-size: 9px;
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: 4px;
+  letter-spacing: 0.5px;
+}
+
+.sidebar-item.active .pro-badge {
+  background: rgba(255, 255, 255, 0.25);
+}
+
 /* Main Content */
 .main-content {
   flex: 1;
@@ -280,7 +295,27 @@ body {
 .tool-description {
   font-size: 14px;
   color: var(--text-secondary);
+  margin-bottom: 12px;
+}
+
+.pro-notice {
+  background: linear-gradient(135deg, rgba(255, 76, 0, 0.1), rgba(255, 107, 53, 0.1));
+  border: 1px solid var(--primary);
+  border-radius: var(--border-radius);
+  padding: 10px 14px;
+  font-size: 13px;
+  color: var(--text);
   margin-bottom: 20px;
+}
+
+.pro-notice a {
+  color: var(--primary);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.pro-notice a:hover {
+  text-decoration: underline;
 }
 
 /* Form Elements */
@@ -600,6 +635,42 @@ textarea.form-input {
   gap: 12px;
   padding: 16px 20px;
   border-top: 1px solid var(--border);
+}
+
+/* Footer */
+.app-footer {
+  margin-top: auto;
+  padding: 20px 0;
+  text-align: center;
+  border-top: 1px solid var(--border);
+}
+
+.app-footer p {
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.app-footer a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.app-footer a:hover {
+  text-decoration: underline;
+}
+
+.footer-separator {
+  margin: 0 10px;
+  color: var(--border);
+}
+
+.model-id {
+  font-size: 11px;
+  color: var(--text-secondary);
+  opacity: 0.7;
+  margin-left: 4px;
 }
 
 /* ========== TABLET (768px+) ========== */

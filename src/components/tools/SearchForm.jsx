@@ -5,7 +5,6 @@ function SearchForm({ onExecute, loading }) {
   const [limit, setLimit] = useState('10')
   const [sources, setSources] = useState({
     web: true,
-    images: false,
     news: false,
   })
   const [scrapeResults, setScrapeResults] = useState(false)
@@ -19,12 +18,16 @@ function SearchForm({ onExecute, loading }) {
 
     const selectedSources = Object.entries(sources)
       .filter(([_, selected]) => selected)
-      .map(([type]) => ({ type }))
+      .map(([type]) => type)
 
     const params = {
       query,
       limit: parseInt(limit),
-      sources: selectedSources,
+    }
+
+    // Only add sources if not just 'web' (default)
+    if (selectedSources.length > 0 && !(selectedSources.length === 1 && selectedSources[0] === 'web')) {
+      params.sources = selectedSources
     }
 
     if (scrapeResults) {
@@ -44,7 +47,7 @@ function SearchForm({ onExecute, loading }) {
         <input
           type="text"
           className="form-input"
-          placeholder="e.g. latest AI news 2024"
+          placeholder="e.g. TV 65 pollici QLED 2026"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           required

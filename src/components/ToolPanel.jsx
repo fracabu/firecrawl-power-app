@@ -22,6 +22,11 @@ function ToolPanel({ tool, onExecute, loading }) {
       <div className="tool-card">
         <h1 className="tool-title">{tool.icon} {tool.name}</h1>
         <p className="tool-description">{tool.description}</p>
+        {tool.requiresPaid && (
+          <div className="pro-notice">
+            Requires paid Firecrawl plan. <a href="https://firecrawl.dev/pricing" target="_blank" rel="noopener noreferrer">View pricing</a>
+          </div>
+        )}
         <FormComponent onExecute={onExecute} loading={loading} />
       </div>
     </div>

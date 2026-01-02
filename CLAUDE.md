@@ -6,6 +6,8 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 Firecrawl Power App is a React-based UI for the Firecrawl API. It provides a visual interface to all Firecrawl tools: Scrape, Map, Search, Crawl, Extract, and Agent.
 
+**Prerequisites:** Node.js 18+, Firecrawl API key (free tier available at https://firecrawl.dev)
+
 ## Development Commands
 
 ```bash
@@ -25,6 +27,8 @@ npm run build
 npm run preview
 ```
 
+After running `npm run dev`, open `http://localhost:5173` in your browser.
+
 ## Architecture
 
 ### Frontend (React + Vite)
@@ -37,12 +41,19 @@ npm run preview
   - `ApiKeyModal.jsx`: Manages Firecrawl API key storage in localStorage
 - **Tool Forms** (`src/components/tools/`): Each Firecrawl tool has its own form component (ScrapeForm, MapForm, SearchForm, CrawlForm, ExtractForm, AgentForm). Forms handle their own field state and call `onExecute(params)` on submit.
 
-### Backend (Express)
+### Backend (Express - Local Development)
 - **Single file**: `server/api.js`
 - Proxies requests from frontend to Firecrawl API (`https://api.firecrawl.dev/v1`)
 - API key passed via `X-API-Key` header from client, falls back to `FIRECRAWL_API_KEY` env var
 - Endpoints mirror Firecrawl API: `/api/scrape`, `/api/map`, `/api/search`, `/api/crawl`, `/api/extract`, `/api/agent`
 - Status endpoints: `/api/crawl/:id`, `/api/agent/:id`
+- Health check: `/api/health`
+
+### Backend (Vercel Serverless - Production)
+- **Directory**: `api/` contains individual serverless functions for each endpoint
+- Each function (e.g., `api/scrape.js`) is a standalone Vercel serverless function
+- Same API key handling as Express backend
+- Configured via `vercel.json` with rewrites for `/api/*` routes
 
 ### Request Flow
 1. User fills form in tool component
@@ -54,16 +65,20 @@ npm run preview
 
 ## Configuration
 
-- **Vite proxy**: `vite.config.js` - proxies `/api` to backend
-- **Environment**: `.env` file at project root for `FIRECRAWL_API_KEY` (optional server-side fallback)
+- **Vite proxy**: `vite.config.js` - proxies `/api` to backend (port 3001)
+- **Environment**: Copy `.env.example` to `.env` for `FIRECRAWL_API_KEY` (optional server-side fallback)
 - **Theme**: Stored in localStorage, applied via `data-theme` attribute on `<html>`
 - **API Key**: Stored in localStorage as `firecrawl_api_key`
+- **Design System**: Uses Firecrawl brand colors (`--primary: #FF4C00`)
 
 ## Key Files to Know
 
 | File | Purpose |
 |------|---------|
 | `src/App.jsx` | Central state management, tool definitions, API calls |
-| `server/api.js` | All backend routes, Firecrawl API proxy logic |
+| `server/api.js` | All backend routes, Firecrawl API proxy logic (local dev) |
+| `api/*.js` | Vercel serverless functions (production) |
 | `src/App.css` | All styles including CSS variables for theming |
+| `vite.config.js` | Dev server config, API proxy settings |
+| `vercel.json` | Production deployment config and API rewrites |
 | `FIRECRAWL_DOCUMENTATION.md` | Complete Firecrawl API reference (in Italian) |

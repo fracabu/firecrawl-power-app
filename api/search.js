@@ -1,4 +1,5 @@
-const FIRECRAWL_API_URL = 'https://api.firecrawl.dev/v1'
+// Search uses v2 API
+const FIRECRAWL_API_URL = 'https://api.firecrawl.dev/v2'
 
 export default async function handler(req, res) {
   if (req.method !== 'POST') {

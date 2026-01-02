@@ -14,17 +14,19 @@ const PORT = 3001
 
 // Firecrawl API configuration
 const FIRECRAWL_API_URL = 'https://api.firecrawl.dev/v1'
+const FIRECRAWL_API_URL_V2 = 'https://api.firecrawl.dev/v2'
 
 app.use(cors())
 app.use(express.json())
 
 // Helper function to call Firecrawl API
-async function callFirecrawl(endpoint, method, body, apiKey) {
+async function callFirecrawl(endpoint, method, body, apiKey, useV2 = false) {
   if (!apiKey) {
     throw new Error('API key required. Please add your Firecrawl API key in settings.')
   }
 
-  const response = await fetch(`${FIRECRAWL_API_URL}${endpoint}`, {
+  const baseUrl = useV2 ? FIRECRAWL_API_URL_V2 : FIRECRAWL_API_URL
+  const response = await fetch(`${baseUrl}${endpoint}`, {
     method,
     headers: {
       'Content-Type': 'application/json',
@@ -71,11 +73,11 @@ app.post('/api/map', async (req, res) => {
   }
 })
 
-// Search endpoint
+// Search endpoint (uses v2 API)
 app.post('/api/search', async (req, res) => {
   try {
     const apiKey = getApiKey(req)
-    const result = await callFirecrawl('/search', 'POST', req.body, apiKey)
+    const result = await callFirecrawl('/search', 'POST', req.body, apiKey, true)
     res.json(result)
   } catch (error) {
     console.error('Search error:', error.message)

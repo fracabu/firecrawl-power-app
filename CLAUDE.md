@@ -82,3 +82,10 @@ After running `npm run dev`, open `http://localhost:5173` in your browser.
 | `vite.config.js` | Dev server config, API proxy settings |
 | `vercel.json` | Production deployment config and API rewrites |
 | `FIRECRAWL_DOCUMENTATION.md` | Complete Firecrawl API reference (in Italian) |
+
+## TODO
+
+- [ ] **Verificare Agent 5 richieste gratis/giorno** - La documentazione Firecrawl menziona 5 richieste Agent gratuite al giorno. Se confermato, aggiornare:
+  - Badge PRO in sidebar (potrebbe diventare "5/day free")
+  - Nota nel ToolPanel per Agent
+  - README (tabella features)

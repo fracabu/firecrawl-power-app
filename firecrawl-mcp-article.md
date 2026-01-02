@@ -76,6 +76,8 @@ While MCP + Claude Code is incredibly powerful for ad-hoc scraping, I built **Fi
 
 {% github fracabu/firecrawl-power-app %}
 
+🚀 **[Try it live on Vercel](https://firecrawl-power-app.vercel.app/)**
+
 ![Tool Screenshot](https://github.com/user-attachments/assets/d6442d47-43e5-4fcd-a174-7d960b0f1307)
 
 The app complements the MCP workflow. Use Claude Code for complex, one-off extractions. Use the UI for repetitive tasks and visual exploration.

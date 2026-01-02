@@ -43,7 +43,7 @@
 | 🌙 **Dark Mode** | Beautiful dark/light theme toggle | Free |
 | 🔑 **BYOK** | Bring Your Own Key - use your personal Firecrawl API key | Free |
 
-> **Note:** PRO features require a [paid Firecrawl plan](https://firecrawl.dev/pricing). Free tier includes 500 credits.
+> **Note:** PRO features require a [paid Firecrawl plan](https://firecrawl.dev/pricing). Free tier includes 500 credits (one-time).
 
 ---
 
@@ -233,7 +233,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 | 🌙 **Dark Mode** | Bellissimo toggle tema chiaro/scuro | Free |
 | 🔑 **BYOK** | Porta la Tua Chiave - usa la tua API key Firecrawl personale | Free |
 
-> **Nota:** Le funzionalità PRO richiedono un [piano Firecrawl a pagamento](https://firecrawl.dev/pricing). Il piano gratuito include 500 crediti.
+> **Nota:** Le funzionalità PRO richiedono un [piano Firecrawl a pagamento](https://firecrawl.dev/pricing). Il piano gratuito include 500 crediti (una tantum).
 
 ---
 

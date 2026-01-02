@@ -32,16 +32,18 @@
 
 ## ✨ Features
 
-| Feature | Description |
-|---------|-------------|
-| 📄 **Scrape** | Extract content from any webpage (Markdown, HTML, Screenshots) |
-| 🗺️ **Map** | Discover all URLs on a website |
-| 🔍 **Search** | Search the web with advanced operators |
-| 🕷️ **Crawl** | Crawl entire websites with depth control |
-| 📊 **Extract** | Extract structured data using AI and JSON schemas |
-| 🤖 **Agent** | Autonomous AI agent for complex data gathering |
-| 🌙 **Dark Mode** | Beautiful dark/light theme toggle |
-| 🔑 **BYOK** | Bring Your Own Key - use your personal Firecrawl API key |
+| Feature | Description | Plan |
+|---------|-------------|------|
+| 📄 **Scrape** | Extract content from any webpage (Markdown, HTML, Screenshots) | Free |
+| 🗺️ **Map** | Discover all URLs on a website | Free |
+| 🕷️ **Crawl** | Crawl entire websites with depth control | Free |
+| 🔍 **Search** | Search the web with advanced operators | PRO |
+| 📊 **Extract** | Extract structured data using AI and JSON schemas | PRO |
+| 🤖 **Agent** | Autonomous AI agent for complex data gathering | PRO |
+| 🌙 **Dark Mode** | Beautiful dark/light theme toggle | Free |
+| 🔑 **BYOK** | Bring Your Own Key - use your personal Firecrawl API key | Free |
+
+> **Note:** PRO features require a [paid Firecrawl plan](https://firecrawl.dev/pricing). Free tier includes 500 credits.
 
 ---
 
@@ -201,6 +203,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 🙏 Acknowledgments
 
 - [Firecrawl](https://firecrawl.dev) - The powerful web scraping API
+- [Firecrawl MCP](https://docs.firecrawl.dev/mcp-server) - Model Context Protocol server
+- [Claude Opus 4.5](https://claude.ai/code) - AI assistant (claude-opus-4-5-20251101)
 - [React](https://react.dev) - UI library
 - [Vite](https://vitejs.dev) - Build tool
 
@@ -218,16 +222,18 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## ✨ Funzionalità
 
-| Funzione | Descrizione |
-|----------|-------------|
-| 📄 **Scrape** | Estrai contenuti da qualsiasi pagina web (Markdown, HTML, Screenshot) |
-| 🗺️ **Map** | Scopri tutti gli URL di un sito web |
-| 🔍 **Search** | Cerca nel web con operatori avanzati |
-| 🕷️ **Crawl** | Scansiona interi siti web con controllo della profondità |
-| 📊 **Extract** | Estrai dati strutturati usando AI e schemi JSON |
-| 🤖 **Agent** | Agente AI autonomo per raccolta dati complessa |
-| 🌙 **Dark Mode** | Bellissimo toggle tema chiaro/scuro |
-| 🔑 **BYOK** | Porta la Tua Chiave - usa la tua API key Firecrawl personale |
+| Funzione | Descrizione | Piano |
+|----------|-------------|-------|
+| 📄 **Scrape** | Estrai contenuti da qualsiasi pagina web (Markdown, HTML, Screenshot) | Free |
+| 🗺️ **Map** | Scopri tutti gli URL di un sito web | Free |
+| 🕷️ **Crawl** | Scansiona interi siti web con controllo della profondità | Free |
+| 🔍 **Search** | Cerca nel web con operatori avanzati | PRO |
+| 📊 **Extract** | Estrai dati strutturati usando AI e schemi JSON | PRO |
+| 🤖 **Agent** | Agente AI autonomo per raccolta dati complessa | PRO |
+| 🌙 **Dark Mode** | Bellissimo toggle tema chiaro/scuro | Free |
+| 🔑 **BYOK** | Porta la Tua Chiave - usa la tua API key Firecrawl personale | Free |
+
+> **Nota:** Le funzionalità PRO richiedono un [piano Firecrawl a pagamento](https://firecrawl.dev/pricing). Il piano gratuito include 500 crediti.
 
 ---
 
@@ -316,5 +322,8 @@ I contributi sono benvenuti! Sentiti libero di aprire una Pull Request.
   <br><br>
   <a href="https://firecrawl.dev">
     <img src="https://img.shields.io/badge/Powered%20by-Firecrawl-FF4C00?style=for-the-badge" alt="Powered by Firecrawl">
+  </a>
+  <a href="https://claude.ai/code">
+    <img src="https://img.shields.io/badge/Built%20with-Claude%20Opus%204.5-7C3AED?style=for-the-badge" alt="Built with Claude">
   </a>
 </p>

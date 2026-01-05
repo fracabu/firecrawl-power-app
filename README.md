@@ -1,6 +1,12 @@
 <h1 align="center">🔥 Firecrawl Power App</h1>
 
-<iframe src="https://player.mux.com/w86VluY00JvsZVGrrRk00902wikYTtBYrfCQCe4Y1001h6o" width="640" height="360" frameborder="0" allowfullscreen></iframe>
+<p align="center">
+  <a href="https://stream.mux.com/w86VluY00JvsZVGrrRk00902wikYTtBYrfCQCe4Y1001h6o.m3u8">
+    <img src="https://image.mux.com/w86VluY00JvsZVGrrRk00902wikYTtBYrfCQCe4Y1001h6o/thumbnail.png?time=5&width=640" alt="Watch Demo Video" width="640">
+  </a>
+  <br>
+  <em>▶️ Click to watch demo video</em>
+</p>
 
 <p align="center">
   <strong>A sleek, powerful UI to harness the full potential of Firecrawl API</strong>

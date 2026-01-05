@@ -1,5 +1,7 @@
 <h1 align="center">🔥 Firecrawl Power App</h1>
 
+<iframe src="https://player.mux.com/w86VluY00JvsZVGrrRk00902wikYTtBYrfCQCe4Y1001h6o" width="640" height="360" frameborder="0" allowfullscreen></iframe>
+
 <p align="center">
   <strong>A sleek, powerful UI to harness the full potential of Firecrawl API</strong>
 </p>
